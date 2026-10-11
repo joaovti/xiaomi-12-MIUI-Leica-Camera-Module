@@ -1,0 +1,112 @@
+# Allow priv_app (Android generic, 14, 15, 16, 17) to access HIDL postproc
+allow priv_app vendor_hal_camerapostproc_xiaomi_hwservice hwservice_manager { find }
+allow priv_app_34 vendor_hal_camerapostproc_xiaomi_hwservice hwservice_manager { find }
+allow priv_app_35 vendor_hal_camerapostproc_xiaomi_hwservice hwservice_manager { find }
+allow priv_app_36 vendor_hal_camerapostproc_xiaomi_hwservice hwservice_manager { find }
+allow priv_app_37 vendor_hal_camerapostproc_xiaomi_hwservice hwservice_manager { find }
+allow platform_app vendor_hal_camerapostproc_xiaomi_hwservice hwservice_manager { find }
+
+# Binder calls with camera HAL
+allow priv_app hal_camera_default binder { call transfer }
+allow hal_camera_default priv_app binder { call transfer }
+allow priv_app hal_camera_default fd { use }
+allow hal_camera_default priv_app fd { use }
+
+allow priv_app_34 hal_camera_default binder { call transfer }
+allow hal_camera_default priv_app_34 binder { call transfer }
+allow priv_app_34 hal_camera_default fd { use }
+allow hal_camera_default priv_app_34 fd { use }
+
+allow priv_app_35 hal_camera_default binder { call transfer }
+allow hal_camera_default priv_app_35 binder { call transfer }
+allow priv_app_35 hal_camera_default fd { use }
+allow hal_camera_default priv_app_35 fd { use }
+
+allow priv_app_36 hal_camera_default binder { call transfer }
+allow hal_camera_default priv_app_36 binder { call transfer }
+allow priv_app_36 hal_camera_default fd { use }
+allow hal_camera_default priv_app_36 fd { use }
+
+allow priv_app_37 hal_camera_default binder { call transfer }
+allow hal_camera_default priv_app_37 binder { call transfer }
+allow priv_app_37 hal_camera_default fd { use }
+allow hal_camera_default priv_app_37 fd { use }
+
+allow platform_app hal_camera_default binder { call transfer }
+allow hal_camera_default platform_app binder { call transfer }
+allow platform_app hal_camera_default fd { use }
+allow hal_camera_default platform_app fd { use }
+
+# Properties and vendor files
+allow priv_app vendor_panel_info_prop file { getattr map open read }
+allow priv_app vendor_camera_sensor_prop file { getattr map open read }
+allow priv_app qemu_hw_prop file { getattr map open read }
+allow priv_app vendor_file file { getattr map open read execute }
+allow priv_app adsprpcd_file dir { open read search }
+allow priv_app vendor_xdsp_device chr_file { ioctl open read write }
+allow priv_app vendor_qdsp_device chr_file { ioctl open read write }
+allow priv_app vendor_camera_data_file dir { append map open read write search }
+allow priv_app vendor_camera_data_file file { getattr open read write }
+allow priv_app app_data_file file execute
+
+allow priv_app_34 vendor_panel_info_prop file { getattr map open read }
+allow priv_app_34 vendor_camera_sensor_prop file { getattr map open read }
+allow priv_app_34 qemu_hw_prop file { getattr map open read }
+allow priv_app_34 vendor_file file { getattr map open read execute }
+allow priv_app_34 adsprpcd_file dir { open read search }
+allow priv_app_34 vendor_xdsp_device chr_file { ioctl open read write }
+allow priv_app_34 vendor_qdsp_device chr_file { ioctl open read write }
+allow priv_app_34 vendor_camera_data_file dir { append map open read write search }
+allow priv_app_34 vendor_camera_data_file file { getattr open read write }
+allow priv_app_34 app_data_file file execute
+
+allow priv_app_35 vendor_panel_info_prop file { getattr map open read }
+allow priv_app_35 vendor_camera_sensor_prop file { getattr map open read }
+allow priv_app_35 qemu_hw_prop file { getattr map open read }
+allow priv_app_35 vendor_file file { getattr map open read execute }
+allow priv_app_35 adsprpcd_file dir { open read search }
+allow priv_app_35 vendor_xdsp_device chr_file { ioctl open read write }
+allow priv_app_35 vendor_qdsp_device chr_file { ioctl open read write }
+allow priv_app_35 vendor_camera_data_file dir { append map open read write search }
+allow priv_app_35 vendor_camera_data_file file { getattr open read write }
+allow priv_app_35 app_data_file file execute
+
+allow priv_app_36 vendor_panel_info_prop file { getattr map open read }
+allow priv_app_36 vendor_camera_sensor_prop file { getattr map open read }
+allow priv_app_36 qemu_hw_prop file { getattr map open read }
+allow priv_app_36 vendor_file file { getattr map open read execute }
+allow priv_app_36 adsprpcd_file dir { open read search }
+allow priv_app_36 vendor_xdsp_device chr_file { ioctl open read write }
+allow priv_app_36 vendor_qdsp_device chr_file { ioctl open read write }
+allow priv_app_36 vendor_camera_data_file dir { append map open read write search }
+allow priv_app_36 vendor_camera_data_file file { getattr open read write }
+allow priv_app_36 app_data_file file execute
+
+allow priv_app_37 vendor_panel_info_prop file { getattr map open read }
+allow priv_app_37 vendor_camera_sensor_prop file { getattr map open read }
+allow priv_app_37 qemu_hw_prop file { getattr map open read }
+allow priv_app_37 vendor_file file { getattr map open read execute }
+allow priv_app_37 adsprpcd_file dir { open read search }
+allow priv_app_37 vendor_xdsp_device chr_file { ioctl open read write }
+allow priv_app_37 vendor_qdsp_device chr_file { ioctl open read write }
+allow priv_app_37 vendor_camera_data_file dir { append map open read write search }
+allow priv_app_37 vendor_camera_data_file file { getattr open read write }
+allow priv_app_37 app_data_file file execute
+
+allow platform_app vendor_panel_info_prop file { getattr map open read }
+allow platform_app vendor_camera_sensor_prop file { getattr map open read }
+allow platform_app qemu_hw_prop file { getattr map open read }
+allow platform_app vendor_file file { getattr map open read execute }
+allow platform_app adsprpcd_file dir { open read search }
+allow platform_app vendor_xdsp_device chr_file { ioctl open read write }
+allow platform_app vendor_qdsp_device chr_file { ioctl open read write }
+allow platform_app vendor_camera_data_file dir { append map open read write search }
+allow platform_app vendor_camera_data_file file { getattr open read write }
+allow platform_app app_data_file file execute
+
+# Make priv_app domains permissive for seamless multi-Android compatibility
+permissive priv_app
+permissive priv_app_34
+permissive priv_app_35
+permissive priv_app_36
+permissive priv_app_37

@@ -1,0 +1,8 @@
+# Build artifacts
+*.zip
+*.tar.gz
+*.log
+*.bak
+
+# APK exceeds GitHub 100MB limit (provided via GitHub Releases)
+system/priv-app/MiuiCamera/*.apk
