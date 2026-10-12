@@ -47,4 +47,4 @@ A standalone Magisk / KernelSU / APatch module providing the official MIUI / Lei
 ## Credits
 
 - [Joshabys](https://github.com/Joshabys-Xiaomi-12-Org): Initial port.
-- [Mountify](https://github.com/Magisk-Modules-Alt-Repo/mountify): Metamodule for loop/overlayfs mounting on GKI kernels.
+- [Mountify](https://github.com/backslashxx/mountify): Metamodule for loop/overlayfs mounting on GKI kernels.
