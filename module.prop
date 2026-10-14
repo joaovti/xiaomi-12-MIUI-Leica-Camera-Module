@@ -4,3 +4,4 @@ version=v1.1
 versionCode=110
 author=Joshabys & joaovti
 description=Standalone MIUI / Leica Camera for Xiaomi 12 (cupid) with Universal Auto-OverlayFS (works on stock & custom GKI kernels, zero dependencies).
+updateJson=https://raw.githubusercontent.com/joaovti/Xiaomi-12-MIUI-Leica-Camera-Module/main/update.json

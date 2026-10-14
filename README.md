@@ -4,6 +4,7 @@
 [![Android](https://img.shields.io/badge/Android-14%20|%2015%20|%2016%20|%2017-green.svg)](#)
 [![Root](https://img.shields.io/badge/Root-KernelSU%20|%20APatch%20|%20Magisk-orange.svg)](#)
 [![Architecture](https://img.shields.io/badge/Arch-ARM64--v8a%20(ARMv9)-purple.svg)](#)
+[![Version](https://img.shields.io/badge/Version-v1.1-brightgreen.svg)](https://github.com/joaovti/Xiaomi-12-MIUI-Leica-Camera-Module/releases)
 
 A standalone Magisk / KernelSU / APatch module providing the official MIUI / Leica Camera for the Xiaomi 12 (cupid) running AOSP-based custom ROMs (LineageOS, PixelOS, crDroid, Paranoid Android, EvolutionX, etc.).
 
@@ -19,6 +20,7 @@ A standalone Magisk / KernelSU / APatch module providing the official MIUI / Lei
 - **ARMv9 BTI/PAC Safe**: JNI libraries patched with Branch Target Identification and Pointer Authentication landing pads to prevent SIGILL/SIGSEGV on Snapdragon 8 Gen 1.
 - **Multi-Android Compatibility**: Complete SELinux rules tailored for Android 14 (`priv_app_34`), Android 15 (`priv_app_35`), Android 16 (`priv_app_36`), and Android 17 (`priv_app_37`).
 - **Clean Zygote Integration**: Strictly compliant native library namespace configuration preventing 32-bit/64-bit Zygote bootloops.
+- **Automated In-App Updates**: Integrated `updateJson` supporting automatic updates directly inside KernelSU, APatch, and Magisk managers.
 
 ---
 
@@ -33,10 +35,16 @@ A standalone Magisk / KernelSU / APatch module providing the official MIUI / Lei
 
 ## Installation
 
-1. Download the latest flashable ZIP (`Xiaomi-12-MIUI-Leica-Camera-v1.1.zip`).
+1. Download the latest flashable ZIP from the [Releases](https://github.com/joaovti/Xiaomi-12-MIUI-Leica-Camera-Module/releases) tab (`Xiaomi-12-MIUI-Leica-Camera-v1.1.zip`).
 2. Flash the ZIP in your root manager (KernelSU / APatch / Magisk).
 3. Reboot your device.
 4. Launch the Leica Camera app and grant all required permissions.
+
+---
+
+## Changelog
+
+See the full history of changes in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
