@@ -13,6 +13,12 @@ if [ "$DEVICE" != "cupid" ] && [ "$(getprop ro.build.product)" != "cupid" ]; the
     ui_print "! Camera HALs and postproc libs may fail on other hardware."
 fi
 
+ui_print "- Configuring Universal Standalone OverlayFS..."
+touch "$MODPATH/skip_mount"
+touch "$MODPATH/skip_mountify"
+set_perm "$MODPATH/post-fs-data.sh" 0 0 0755
+set_perm "$MODPATH/global_mount.sh" 0 0 0755
+
 ui_print "- Setting file permissions..."
 set_perm_recursive "$MODPATH/system/priv-app/MiuiCamera" 0 0 0755 0644
 set_perm_recursive "$MODPATH/system/lib64" 0 0 0755 0644
@@ -27,5 +33,7 @@ rm -rf /data/data/com.android.camera/code_cache 2>/dev/null
 
 ui_print "========================================"
 ui_print " Installation completed successfully!"
+ui_print " Standalone Universal Mount: Active"
+ui_print " (No Mountify metamodule required)"
 ui_print " Please reboot your device to apply!"
 ui_print "========================================"

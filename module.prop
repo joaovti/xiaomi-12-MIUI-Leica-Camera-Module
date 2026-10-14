@@ -1,6 +1,6 @@
 id=cupid-miuicamera
 name=MIUI / Leica Camera for Xiaomi 12 (cupid)
-version=v1.0
-versionCode=100
+version=v1.1
+versionCode=110
 author=Joshabys & joaovti
-description=Standalone MIUI / Leica Camera port from marble for Xiaomi 12 (cupid) running LineageOS 24 / AOSP.
+description=Standalone MIUI / Leica Camera for Xiaomi 12 (cupid) with Universal Auto-OverlayFS (works on stock & custom GKI kernels, zero dependencies).

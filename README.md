@@ -11,40 +11,36 @@ A standalone Magisk / KernelSU / APatch module providing the official MIUI / Lei
 
 ## Features
 
-- Full Leica Experience: Authentic Leica color profiles, watermarks, filters, and user interface.
-- Multi-Lens Switching: Ultra-Wide (0.6x), Wide (1x), and Telephoto (2x).
-- Camera Modes: Photo, Video, Pro mode, Portrait, Documents, Night mode, and Slow Motion.
-- Hardware Acceleration: Native DSP/NPU acceleration via Qualcomm SNPE and FastRPC Hexagon Tensor Processor (HTP v69).
-- ARMv9 BTI/PAC Safe: JNI libraries patched with Branch Target Identification and Pointer Authentication landing pads to prevent SIGILL/SIGSEGV on Snapdragon 8 Gen 1.
-- Multi-Android Compatibility: Complete SELinux rules tailored for Android 14 (priv_app_34), Android 15 (priv_app_35), Android 16 (priv_app_36), and Android 17 (priv_app_37).
-- Clean Zygote Integration: Strictly compliant native library namespace configuration preventing 32-bit/64-bit Zygote bootloops.
+- **Universal Auto-Mounting (Zero Dependencies)**: Built-in standalone OverlayFS engine that auto-detects kernel capabilities. Operates in fast `tmpfs` mode if `CONFIG_TMPFS_XATTR` is present, or automatically falls back to an internal loopback `ext4_sparse` staging mount on stock GKI kernels. **No Mountify metamodule required!**
+- **Full Leica Experience**: Authentic Leica color profiles, watermarks, filters, and user interface.
+- **Multi-Lens Switching**: Ultra-Wide (0.6x), Wide (1x), and Telephoto (2x).
+- **Camera Modes**: Photo, Video, Pro mode, Portrait, Documents, Night mode, and Slow Motion.
+- **Hardware Acceleration**: Native DSP/NPU acceleration via Qualcomm SNPE and FastRPC Hexagon Tensor Processor (HTP v69).
+- **ARMv9 BTI/PAC Safe**: JNI libraries patched with Branch Target Identification and Pointer Authentication landing pads to prevent SIGILL/SIGSEGV on Snapdragon 8 Gen 1.
+- **Multi-Android Compatibility**: Complete SELinux rules tailored for Android 14 (`priv_app_34`), Android 15 (`priv_app_35`), Android 16 (`priv_app_36`), and Android 17 (`priv_app_37`).
+- **Clean Zygote Integration**: Strictly compliant native library namespace configuration preventing 32-bit/64-bit Zygote bootloops.
 
 ---
 
 ## Requirements
 
-- Device: Xiaomi 12 (cupid) Snapdragon 8 Gen 1 (SM8450).
-- ROM: Any AOSP-based Custom ROM on Android 14, 15, 16, or 17.
-- Root Solution: KernelSU, APatch, or Magisk.
-
-> [!IMPORTANT]
-> For KernelSU / APatch users:
-> Due to stock GKI 5.10 kernels lacking tmpfs xattrs, you must install the Mountify metamodule with ext4_sparse mode enabled (use_ext4_sparse=1) so that /system/priv-app can be overlaid properly.
+- **Device**: Xiaomi 12 (cupid) Snapdragon 8 Gen 1 (SM8450).
+- **ROM**: Any AOSP-based Custom ROM on Android 14, 15, 16, or 17.
+- **Root Solution**: KernelSU, APatch, or Magisk.
+- **Kernel**: Stock GKI 5.10 or Custom Kernels (both fully supported out-of-the-box).
 
 ---
 
 ## Installation
 
-1. Download the latest flashable ZIP from the Releases tab.
-2. If using KernelSU or APatch:
-   - Ensure the Mountify metamodule is installed and active.
-3. Open your root manager (KernelSU / APatch / Magisk) and flash the ZIP.
-4. Reboot your device.
-5. Launch the Leica Camera app and grant all required permissions.
+1. Download the latest flashable ZIP (`Xiaomi-12-MIUI-Leica-Camera-v1.1.zip`).
+2. Flash the ZIP in your root manager (KernelSU / APatch / Magisk).
+3. Reboot your device.
+4. Launch the Leica Camera app and grant all required permissions.
 
 ---
 
 ## Credits
 
 - [Joshabys](https://github.com/Joshabys-Xiaomi-12-Org): Initial port.
-- [Mountify](https://github.com/backslashxx/mountify): Metamodule for loop/overlayfs mounting on GKI kernels.
+- [backslashxx/mountify](https://github.com/backslashxx/mountify): Base OverlayFS mounting logic.
